@@ -25,19 +25,36 @@ public class House extends GraphicalObject {
     public void draw(DrawTool drawTool) {
         drawTool.setCurrentColor(Color.DARK_GRAY);
         drawTool.drawFilledRectangle(150,300,200,240);
+        //Haus
         drawTool.setCurrentColor(Color.BLACK);
         drawTool.drawFilledRectangle(275,460,50,80);
+        //Tür
+        drawTool.setCurrentColor(Color.LIGHT_GRAY);
+        drawTool.drawFilledRectangle(175,325,40,40);
         drawTool.setCurrentColor(Color.BLACK);
         drawTool.drawRectangle(175,325,20,20);
         drawTool.drawRectangle(195,325,20,20);
         drawTool.drawRectangle(175,345,20,20);
         drawTool.drawRectangle(175,345,20,20);
-        drawTool.setCurrentColor(Color.LIGHT_GRAY);
-        drawTool.drawFilledRectangle(175,325,40,40);
         drawTool.setCurrentColor(Color.BLACK);
         drawTool.drawRectangle(225,325,40,40);
+
         drawTool.setCurrentColor(Color.LIGHT_GRAY);
         drawTool.drawFilledRectangle(225,325,40,40);
+        drawTool.setCurrentColor(Color.BLACK);
+        drawTool.drawRectangle(225,325,20,20);
+        drawTool.drawRectangle(245,325,20,20);
+        drawTool.drawRectangle(225,345,20,20);
+        drawTool.drawRectangle(245,345,20,20);
+
+        drawTool.setCurrentColor(Color.RED);
+        drawTool.drawFilledTriangle(150,300,250,200,350,300);
+        drawTool.setCurrentColor(Color.black);
+        drawTool.drawTriangle(150,300,250,200,350,300);
+
+
+        drawTool.setCurrentColor(Color.yellow);
+        drawTool.drawFilledCircle(285,500,3);
     }
 
     /**
