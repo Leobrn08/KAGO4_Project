@@ -13,7 +13,12 @@ public class House extends GraphicalObject {
     /**
      * Erzeugt ein neues Objekt der Klasse House
      */
-    public House(){
+    public House(double x, double y, double width, double height) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+
         // Hier passiert momentan nichts - da muss auch anfangs nichts dran geändert werden.
     }
 
@@ -24,37 +29,38 @@ public class House extends GraphicalObject {
     @Override
     public void draw(DrawTool drawTool) {
         drawTool.setCurrentColor(Color.DARK_GRAY);
-        drawTool.drawFilledRectangle(150,300,200,240);
+        // 150, 300, 200, 240
+        drawTool.drawFilledRectangle(x,y,200,240);
         //Haus
         drawTool.setCurrentColor(Color.BLACK);
-        drawTool.drawFilledRectangle(275,460,50,80);
+        drawTool.drawFilledRectangle(x + 125,y + 160,50,80);
         //Tür
         drawTool.setCurrentColor(Color.LIGHT_GRAY);
-        drawTool.drawFilledRectangle(175,325,40,40);
+        drawTool.drawFilledRectangle(x + 25,y + 25,40,40);
         drawTool.setCurrentColor(Color.BLACK);
-        drawTool.drawRectangle(175,325,20,20);
-        drawTool.drawRectangle(195,325,20,20);
-        drawTool.drawRectangle(175,345,20,20);
-        drawTool.drawRectangle(175,345,20,20);
+        drawTool.drawRectangle(x + 25,y + 25,20,20);
+        drawTool.drawRectangle(x + 45,y + 25,20,20);
+        drawTool.drawRectangle(x + 25,y + 45,20,20);
+        drawTool.drawRectangle(x + 45,y + 45,20,20);
         drawTool.setCurrentColor(Color.BLACK);
-        drawTool.drawRectangle(225,325,40,40);
+        drawTool.drawRectangle(x+ 75,y + 25,40,40);
 
         drawTool.setCurrentColor(Color.LIGHT_GRAY);
-        drawTool.drawFilledRectangle(225,325,40,40);
+        drawTool.drawFilledRectangle(x + 75,y + 25,40,40);
         drawTool.setCurrentColor(Color.BLACK);
-        drawTool.drawRectangle(225,325,20,20);
-        drawTool.drawRectangle(245,325,20,20);
-        drawTool.drawRectangle(225,345,20,20);
-        drawTool.drawRectangle(245,345,20,20);
+        drawTool.drawRectangle(x + 75,y + 25,20,20);
+        drawTool.drawRectangle(x + 95,y + 25,20,20);
+        drawTool.drawRectangle(x + 75,y + 45,20,20);
+        drawTool.drawRectangle(x + 95,y + 45,20,20);
 
         drawTool.setCurrentColor(Color.RED);
-        drawTool.drawFilledTriangle(150,300,250,200,350,300);
+        drawTool.drawFilledTriangle(x,y,x + 100,y -100,x + 200,y);
         drawTool.setCurrentColor(Color.black);
-        drawTool.drawTriangle(150,300,250,200,350,300);
+        drawTool.drawTriangle(x,y,x + 100,y - 100,x + 200,y);
 
 
         drawTool.setCurrentColor(Color.yellow);
-        drawTool.drawFilledCircle(285,500,3);
+        drawTool.drawFilledCircle(x + 135,y + 200,3);
     }
 
     /**
