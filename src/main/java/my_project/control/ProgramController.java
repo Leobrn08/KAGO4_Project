@@ -51,7 +51,7 @@ public class ProgramController {
         // Erstelle ein Objekt der Klasse House und initialisiere damit die Referenz house1
         firstHouse = new House(150,300,200,240);
         //secondHouse = new House(600,300,200,240);
-        firstTree = new Tree();
+        firstTree = new Tree(500,300,50,240);
         firstCloud = new Cloud();
         // Teile dem ViewController-Objekt mit, dass das House-Objekt gezeichnet werden soll
         viewController.draw(firstHouse);
