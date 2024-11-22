@@ -40,12 +40,12 @@ public class Tree extends GraphicalObject {
     public void draw(DrawTool drawTool) {
         //Code für einen Baum
         //500,300,50,240
+        //Stamm
         drawTool.setCurrentColor(new Color(165,42,42));
         drawTool.drawFilledRectangle(x,y,width,height);
-        //Stamm
         drawTool.setCurrentColor(Color.GREEN);
-        drawTool.drawFilledCircle(x + 25,y,50);
-        //Tür
+        drawTool.drawFilledCircle(x + width/2,y,width*0.75);
+        //Baumkrone
 
     }
 
