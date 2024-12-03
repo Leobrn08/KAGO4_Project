@@ -2,6 +2,7 @@ package my_project.control;
 
 
 import KAGO_framework.control.ViewController;
+import my_project.model.Busch;
 import my_project.model.Cloud;
 import my_project.model.House;
 import my_project.model.Tree;
@@ -24,7 +25,8 @@ public class ProgramController {
 
 
     // Referenzen
-    private final ViewController viewController;  // diese Referenz soll auf ein Objekt der Klasse viewController zeigen. Über dieses Objekt wird das Fenster gesteuert.
+    private final ViewController viewController; // diese Referenz soll auf ein Objekt der Klasse viewController zeigen. Über dieses Objekt wird das Fenster gesteuert.
+    private Busch firstBush;
     private House firstHouse; // deklariert eine Referenz für ein Objekt der Klasse House
     private House secondHouse;
     private Tree firstTree;
