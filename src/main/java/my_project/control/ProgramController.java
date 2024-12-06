@@ -54,7 +54,7 @@ public class ProgramController {
         firstHouse = new House(150,300,200,240);
         //secondHouse = new House(600,300,200,240);
         firstTree = new Tree(100,300,200,240);
-        firstCloud = new Cloud();
+        firstCloud = new Cloud(100, 100, 100);
         // Teile dem ViewController-Objekt mit, dass das House-Objekt gezeichnet werden soll
         viewController.draw(firstHouse);
         //viewController.draw(secondHouse);

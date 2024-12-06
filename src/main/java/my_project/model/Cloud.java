@@ -5,63 +5,49 @@ import KAGO_framework.view.DrawTool;
 
 import java.awt.*;
 public class Cloud extends GraphicalObject {
+    private double r;
 
-    public Cloud(){
-
+    public Cloud(double x, double y, double r){
+        this.x = x;
+        this.y = y;
+        this.r = r;
     }
 
     @Override
     public void draw(DrawTool drawTool) {
 
         drawTool.setCurrentColor(new Color(65, 58, 58));
-        drawTool.drawCircle(100,50,40);
-        drawTool.drawCircle(140,80,40);
-        drawTool.drawCircle(160,30,40);
-        drawTool.drawCircle(180,60,40);
-        drawTool.drawCircle(200,80,40);
-        drawTool.drawCircle(220,50,40);
-
-        drawTool.drawCircle(350,50,40);
-        drawTool.drawCircle(390,80,40);
-        drawTool.drawCircle(410,30,40);
-        drawTool.drawCircle(430,60,40);
-        drawTool.drawCircle(450,80,40);
-        drawTool.drawCircle(470,50,40);
-
-        drawTool.drawCircle(600,50,40);
-        drawTool.drawCircle(640,80,40);
-        drawTool.drawCircle(660,30,40);
-        drawTool.drawCircle(680,60,40);
-        drawTool.drawCircle(700,80,40);
-        drawTool.drawCircle(720,50,40);
+        drawTool.drawCircle(x,y,r);
+        drawTool.drawCircle(x+r,y+r*0.75,r);
+        drawTool.drawCircle(x+r*0.5,y-r*0.5,r);
+        drawTool.drawCircle(x+r*2,y+r*0.25,r);
+        drawTool.drawCircle(x+r*2.5,y+r*0.75,r);
+        drawTool.drawCircle(x+r*3,y,r);
+        /**
+         drawTool.drawCircle(100,50,40);
+         drawTool.drawCircle(140,80,40);
+         drawTool.drawCircle(160,30,40);
+         drawTool.drawCircle(180,60,40);
+         drawTool.drawCircle(200,80,40);
+         drawTool.drawCircle(220,50,40);
+         */
 
         drawTool.setCurrentColor(Color.lightGray);
-        drawTool.drawFilledCircle(100,50,40);
-        drawTool.drawFilledCircle(140,80,40);
-        drawTool.drawFilledCircle(160,30,40);
-        drawTool.drawFilledCircle(180,60,40);
-        drawTool.drawFilledCircle(200,80,40);
-        drawTool.drawFilledCircle(220,50,40);
-
-        drawTool.drawFilledCircle(350,50,40);
-        drawTool.drawFilledCircle(390,80,40);
-        drawTool.drawFilledCircle(410,30,40);
-        drawTool.drawFilledCircle(430,60,40);
-        drawTool.drawFilledCircle(450,80,40);
-        drawTool.drawFilledCircle(470,50,40);
-
-        drawTool.drawFilledCircle(600,50,40);
-        drawTool.drawFilledCircle(640,80,40);
-        drawTool.drawFilledCircle(660,30,40);
-        drawTool.drawFilledCircle(680,60,40);
-        drawTool.drawFilledCircle(700,80,40);
-        drawTool.drawFilledCircle(720,50,40);
-
+        drawTool.drawFilledCircle(x,y,r);
+        drawTool.drawFilledCircle(x+r,y+r*0.75,r);
+        drawTool.drawFilledCircle(x+r*0.5,y-r*0.5,r);
+        drawTool.drawFilledCircle(x+r*2,y+r*0.25,r);
+        drawTool.drawFilledCircle(x+r*2.5,y+r*0.75,r);
+        drawTool.drawFilledCircle(x+r*3,y,r);
 
 
     }
     @Override
     public void update(double dt){
-
+        x = x + 200*dt;
+        if (x > 800-r){
+            x = -r * 6;
+            y = (Math.random());
+        }
     }
 }
