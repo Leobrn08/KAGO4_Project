@@ -2,10 +2,7 @@ package my_project.control;
 
 
 import KAGO_framework.control.ViewController;
-import my_project.model.Busch;
-import my_project.model.Cloud;
-import my_project.model.House;
-import my_project.model.Tree;
+import my_project.model.*;
 
 
 /**
@@ -31,6 +28,7 @@ public class ProgramController {
     private House secondHouse;
     private Tree firstTree;
     private Cloud firstCloud;
+    private Sonne firstSonne;
 
 
     /**
@@ -54,12 +52,15 @@ public class ProgramController {
         firstHouse = new House(150,300,200,240);
         //secondHouse = new House(600,300,200,240);
         firstTree = new Tree(100,300,200,240);
-        firstCloud = new Cloud(100, 100, 100);
+        firstCloud = new Cloud(100, 100, 75);
+        firstSonne = new Sonne(0,0,150);
         // Teile dem ViewController-Objekt mit, dass das House-Objekt gezeichnet werden soll
         viewController.draw(firstHouse);
         //viewController.draw(secondHouse);
+        viewController.draw(firstSonne);
         viewController.draw(firstTree);
         viewController.draw(firstCloud);
+        viewController.draw(secondHouse);
     }
 
 
