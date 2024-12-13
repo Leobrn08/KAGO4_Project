@@ -23,7 +23,7 @@ public class Sonne extends GraphicalObject {
 
     @Override
     public void update(double dt) {
-        x = (-x) + 100 * dt;
+        x = (-x) + 10 * dt;
         if (x > 1000 - r) {
             x = -r * 4;
             y = (Math.random());

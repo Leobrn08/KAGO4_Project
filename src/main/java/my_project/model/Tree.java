@@ -44,7 +44,7 @@ public class Tree extends GraphicalObject {
         drawTool.setCurrentColor(new Color(165,42,42));
         drawTool.drawFilledRectangle(x,y,width,height);
         drawTool.setCurrentColor(Color.GREEN);
-        drawTool.drawFilledCircle(x + width/2,y,width*0.75);
+        drawTool.drawFilledCircle(x + width/2,y,width*2);
         //Baumkrone
 
     }
